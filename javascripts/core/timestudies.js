@@ -556,7 +556,7 @@ function importStudyTree(input) {
 		var ec = parseInt(input.split("|")[1])
 		if (ec > 0) {
 			justImported = true;
-			if (ec > 12) {
+			if (ec > 13) {
 				buyMasteryStudy("ec", ec, true)
 				changeMS = true
 			} else document.getElementById("ec" + parseInt(input.split("|")[1]) + "unl").click();
