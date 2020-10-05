@@ -1,6 +1,6 @@
 presets={}
 
-// Time studies
+// Time studies.
 
 function buyWithAntimatter() {
 	if (player.money.gte(player.timestudy.amcost)) {
