@@ -281,3 +281,4 @@ function updateNextPreonEnergyThreshold(){
 	tmp.qu.nanofield.power += toSkip
 	tmp.qu.nanofield.powerThreshold = getNanoRewardReq(1)
 }
+//ok. nanofield didn't even SAVE.
