@@ -5332,7 +5332,7 @@ function nextICUnlockUpdating(){
 }
 
 function passiveIPperMUpdating(diff){
-	player.infinityPoints = player.infinityPoints.plus(bestRunIppm.times(player.offlineProd/100).times(diff/600))
+	player.infinityPoints = player.infinityPoints.plus(bestRunIppm.times(player.offlineProd/100).times(diff/60))
 }
 
 function giveBlackHolePowerUpdating(diff){
