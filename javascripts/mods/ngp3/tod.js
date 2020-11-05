@@ -218,7 +218,7 @@ function getTreeUpgradeCost(upg,add) {
 	if (upg == 3) return Decimal.pow(32, lvl).times(3e9)
 	if (upg == 4) return Decimal.pow(2, lvl + Math.max(lvl - 37, 0) * (lvl - 36) / 2).times(1e12)
 	if (upg == 5) {
-		if (player.achievements.includes("ng3p87")) return Decimal.pow(2, lvl + Math.pow(Math.max(0, lvl - 50), 1.5)).times(4e12)
+		//if (player.achievements.includes("ng3p87")) return Decimal.pow(2, lvl + Math.pow(Math.max(0, lvl - 50), 1.5)).times(4e12)
 		return Decimal.pow(2, lvl + Math.max(lvl - 35, 0) * (lvl - 34) / 2 + Math.pow(Math.max(0, lvl - 50), 1.5)).times(4e12)
 	}
 	if (upg == 6) return Decimal.pow(4, lvl * (lvl + 3) / 2).times(6e22)
@@ -250,7 +250,7 @@ function getEffectiveTreeUpgLevel(upg){
 	lvl = getTreeUpgradeLevel(upg) * tmp.tue
 	if (upg == 1) if (lvl >= 500) lvl = 500 * Math.pow(lvl / 500,.9)
 	if (upg == 2) if (lvl > 64) lvl = (lvl + 128) / 3
-	if (upg == 5) if (lvl > 500 && !player.achievements.includes("ng3p87")) lvl = Math.sqrt(lvl / 500) * 500
+	//if (upg == 5) if (lvl > 500 && !player.achievements.includes("ng3p87")) lvl = Math.sqrt(lvl / 500) * 500
 	if (upg == 7) if (lvl > 100) lvl -= Math.sqrt(lvl) - 10
 	if (upg == 8) if (lvl > 1111) lvl = 1111 + (lvl - 1111) / 2
 	return lvl
@@ -278,7 +278,7 @@ function getTreeUpgradeEffect(upg) {
 	}
 	if (upg == 5) {
 		let MA = player.meta.bestOverQuantums
-		if (player.achievements.includes("ng3p87")) MA = MA.plus(player.meta.bestOverGhostifies)
+		//if (player.achievements.includes("ng3p87")) MA = MA.plus(player.meta.bestOverGhostifies)
 		return Math.pow(Math.log10(MA.add(1).log10() + 1) / 5 + 1, Math.sqrt(lvl))
 	}
 	if (upg == 6) {
